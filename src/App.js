@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
+import HomePage from "./components/home-page/Home-page";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div>
-      Hello
-      <h1>Travel site</h1>
+      <Navbar />
+      <HomePage />
     </div>
   );
 }
