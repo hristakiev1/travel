@@ -18,7 +18,7 @@ function Navbar(props) {
             TRVL
             <img
               className="logo-image"
-              src="http://www.clker.com/cliparts/P/S/8/f/r/C/white-cat-logo-md.png"
+              src="/source-folder/images/logo.png"
               alt=""
             />
           </Link>

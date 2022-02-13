@@ -3,10 +3,15 @@ import "./Home-page.css";
 
 const HomePage = () => {
   return (
-    <div className="container">
-      <video src="src/source-folder/videos/video-1.mp4" />
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What do you waiting for?</p>
+    <div className="hero-container">
+      <video src="/source-folder/videos/video-1.mp4" autoPlay loop muted>
+        Your browser does`t suppot videos
+      </video>
+      <div className="hero-text">
+        <h1>ADVENTURE AWAITS</h1>
+        <p>What are you waiting for?</p>
+      </div>
+      <div className="btn"></div>
     </div>
   );
 };
