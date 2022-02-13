@@ -1,8 +1,8 @@
 import React from "react";
-import "./Home-page.css";
+import "./Hero.css";
 import Button from "../utilities/Button";
 
-const HomePage = () => {
+const Hero = () => {
   return (
     <div className="hero-container">
       <video src="/source-folder/videos/video-1.mp4" autoPlay loop muted>
@@ -33,4 +33,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Hero;

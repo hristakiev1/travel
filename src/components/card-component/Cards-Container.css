@@ -1,0 +1,15 @@
+.card-container {
+  margin: 10rem 10rem;
+  background-color: whitesmoke;
+  text-align: center;
+}
+.card-container > h2 {
+  font-size: 3rem;
+  margin: 6rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
