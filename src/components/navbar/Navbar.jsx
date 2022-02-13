@@ -35,22 +35,26 @@ function Navbar(props) {
 
         <ul className={`menu-links ${clicked ? null : "menu-toggler"}`}>
           <li className="nav-items">
-            <Link className="nav-links" to="/home">
+            <Link className="nav-links" to="/home" onClick={handleClick}>
               Home
             </Link>
           </li>
           <li className="nav-items">
-            <Link className="nav-links" to="/home">
+            <Link className="nav-links" to="/home" onClick={handleClick}>
               Services
             </Link>
           </li>
           <li className="nav-items">
-            <Link className="nav-links" to="/home">
+            <Link className="nav-links" to="/home" onClick={handleClick}>
               Productions
             </Link>
           </li>
           <li className="nav-items">
-            <Link className="nav-links nav-btn" to="/home">
+            <Link
+              className="nav-links nav-btn"
+              to="/home"
+              onClick={handleClick}
+            >
               Sign up
             </Link>
           </li>
