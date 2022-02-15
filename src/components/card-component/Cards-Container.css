@@ -1,15 +1,16 @@
 .card-container {
-  margin: 10rem 10rem;
   background-color: whitesmoke;
   text-align: center;
 }
-.card-container > h2 {
+.card-container__heading {
   font-size: 3rem;
-  margin: 6rem;
+  margin: 5rem 6rem;
+  padding-top: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-items: center;
 }
