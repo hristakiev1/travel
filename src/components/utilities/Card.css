@@ -1,10 +1,7 @@
-.card-board {
-  display: flex;
-  justify-content: center;
-}
 .card-element {
   border-radius: 10px;
-  width: 50%;
+  width: 100%;
+  height: 100%;
   margin: 2rem 0;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -13,21 +10,25 @@
 }
 .card__header {
   width: 100%;
+
   position: relative;
   overflow: hidden;
 }
 
 .card__image {
   width: 100%;
+  /* max-height: 225px; */
+  object-fit: cover;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  transition: transform 1s;
+
+  transition: transform 2000ms;
 }
 .card__image:hover {
   transform: scale(1.1);
 }
 
-.image-tag {
+.image-subtitle {
   background-color: rgb(94, 161, 206);
   color: white;
   font-size: 11px;
@@ -36,4 +37,26 @@
   position: absolute;
   bottom: 0.2rem;
   left: 0.7rem;
+}
+
+.card-text {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+.card-text > h2 {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .card-element {
+    max-width: 650px;
+    max-height: 500px;
+  }
+  .card-element:f {
+    max-width: 650px;
+    max-height: 500px;
+  }
+  .card-text {
+    font-size: 1.4rem;
+  }
 }
