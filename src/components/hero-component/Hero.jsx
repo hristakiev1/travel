@@ -23,14 +23,14 @@ const Hero = () => {
             buttonStyle="btn--outline"
             buttonSize="btn--medium"
             type="submit"
-            onClick={"sign-up"}
+            path={"sign-up"}
           >
             GET STARTED
           </Button>
           <Button
             buttonStyle="btn--primary"
             buttonSize="btn--medium"
-            onClick={"watch-trailer"}
+            path={"watch-trailer"}
           >
             WATCH TRAILER <i className="fa fa-play-circle" aria-hidden="true" />
           </Button>

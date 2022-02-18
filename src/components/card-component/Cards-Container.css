@@ -40,10 +40,9 @@ Link {
   }
   .big-cards {
     display: flex;
-    flex: row;
   }
   .small-cards {
     display: flex;
-    flex: row;
+    flex-direction: row;
   }
 }

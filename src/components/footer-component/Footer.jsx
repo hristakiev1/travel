@@ -10,17 +10,21 @@ function Footer(props) {
         <h2 className="footer__heading">
           Join the Adventure newsletter to receive our best vacation deals
         </h2>
+        <p>You can unsubscribe any time.</p>
         <div className="form-group">
-          <p>You can unsubscribe any time.</p>
-          <input type="email" label="Your Email"></input>
-          <Button buttonStyle={"btn--outline"}>Subscribe</Button>
+          <input type="email" placeholder="Your Email"></input>
+          <Button path={"Unsubscribe"} buttonStyle={"btn--outline"}>
+            Subscribe
+          </Button>
         </div>
         <div className="footer__map">
-          <div className="footer__about">
+          <div className="footer__links">
             <ul>
               <h4>About Us</h4>
               <li>
-                <Link to="/Products">How it works</Link>
+                <Link to="/Products" className="link-item">
+                  How it works
+                </Link>
               </li>
               <li>
                 <Link to="/Products">Testimonials</Link>
@@ -36,7 +40,7 @@ function Footer(props) {
               </li>
             </ul>
           </div>
-          <div className="footer__videos">
+          <div className="footer__links">
             <ul>
               <h4>Videos</h4>
               <li>
@@ -53,15 +57,66 @@ function Footer(props) {
               </li>
             </ul>
           </div>
+          <div className="footer__links">
+            <ul>
+              <h4>Contact Us</h4>
+              <li>
+                <Link to="/Products">Contact</Link>
+              </li>
+              <li>
+                <Link to="/Products">Support</Link>
+              </li>
+              <li>
+                <Link to="/Products">Destinations</Link>
+              </li>
+              <li>
+                <Link to="/Products">Sponsorships</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="footer__links">
+            <ul>
+              <h4>Social Media</h4>
+              <li>
+                <Link to="/Products">Instagram</Link>
+              </li>
+              <li>
+                <Link to="/Products">Facebook</Link>
+              </li>
+              <li>
+                <Link to="/Products">Youtube</Link>
+              </li>
+              <li>
+                <Link to="/Products">Twitter</Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="footer-logo">
-          TRVL
-          <img
-            className="logo-image"
-            src="/source-folder/images/logo.png"
-            alt=""
-          />
-          <div>TRVLⒸ2022</div>
+          <div>
+            TRVL
+            <img
+              className="logo-image"
+              src="/source-folder/images/logo.png"
+              alt=""
+            />
+          </div>
+
+          <div className="footer__copyright">TRVLⒸ2022</div>
+          <div className="footer__media-links">
+            <Link to="www.facebook.com">
+              <i class="fab fa-facebook-f" />
+            </Link>
+            <Link to="www.facebook.com">
+              <i class="fab fa-twitter" />
+            </Link>
+            <Link to="www.facebook.com">
+              <i class="fab fa-instagram" />
+            </Link>
+            <Link to="www.facebook.com">
+              <i class="fab fa-linkedin-in" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
