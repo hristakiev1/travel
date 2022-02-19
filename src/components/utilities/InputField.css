@@ -5,12 +5,12 @@
 .sign-in__input {
   color: black;
   font-size: 18px;
-  padding: 10px 10px 10px 5px;
+  padding: 15px 10px 10px 5px;
   display: block;
   width: 100%;
   border: none;
   border-bottom: 1px solid black;
-  margin: 1.2rem 0;
+  margin: 1.3rem 0;
   outline: none;
 }
 
@@ -27,5 +27,5 @@
 .sign-in__input:focus::placeholder {
   font-size: 1rem;
   left: 0;
-  top: -2px;
+  top: -1px;
 }
