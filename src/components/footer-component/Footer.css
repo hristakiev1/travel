@@ -23,6 +23,10 @@
   outline: none;
   border-radius: 5px;
   padding: 1rem 1.5rem;
+  border: 0;
+}
+.form-group input::placeholder {
+  font-size: 1.5rem;
 }
 
 .footer__map {

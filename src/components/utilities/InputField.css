@@ -1,0 +1,31 @@
+.sign-in__form-group {
+  position: relative;
+}
+
+.sign-in__input {
+  color: black;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 1.2rem 0;
+  outline: none;
+}
+
+.sign-in__input::placeholder {
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 60px;
+  top: 20px;
+  transition: 300ms ease all;
+}
+.sign-in__input:focus::placeholder {
+  font-size: 1rem;
+  left: 0;
+  top: -2px;
+}
