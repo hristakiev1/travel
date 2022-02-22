@@ -9,13 +9,13 @@ const SignIn = () => {
       <p>Sign in with your email and password</p>
       <form className="sign-in__form" action="submit">
         <InputField
-          id={"email"}
+          name={"email"}
           type={"email"}
           placeholder={"User Name"}
           required={"required"}
         />
         <InputField
-          id={"password"}
+          name={"password"}
           type={"password"}
           placeholder={"Password"}
           required={"required"}

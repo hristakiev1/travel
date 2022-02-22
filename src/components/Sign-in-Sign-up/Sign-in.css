@@ -19,3 +19,26 @@
   margin-top: 2rem;
   padding: 0.5rem 0;
 }
+.btn-submit:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+}
+.btn-submit:active {
+  background: black;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid gainsboro;
+}
+
+.input-error {
+  color: hotpink;
+  font-size: 1.5rem;
+  background: black;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  text-align: center;
+}
