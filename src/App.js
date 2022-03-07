@@ -7,6 +7,7 @@ import Productions from "./components/pages/Productions";
 import Footer from "./components/footer-component/Footer";
 import Unsubscribe from "./components/pages/Unsubscribe";
 import Credentials from "./components/pages/Credentials";
+import Offer from "./components/offer/Offer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Productions" element={<Productions />} />
         <Route path="/Unsubscribe" element={<Unsubscribe />} />
         <Route path="/sign-up" element={<Credentials />} />
+        <Route path="/offer" element={<Offer />} />
       </Routes>
       {/* <Footer /> */}
     </div>

@@ -10,10 +10,10 @@ const CardContainer = () => {
       <div className="card-grid">
         <div className="big-cards">
           <Card
-            image={"/source-folder/images/img-8.jpg"}
+            image={"https://media.timeout.com/images/105490133/image.jpg"}
             sutitle={"Adventure"}
-            text={"Explorer the hidden waterfall deep inside the Amazon jungle"}
-            path={"/services"}
+            text={"Explorer the hidden gems of Sicilly coast"}
+            path={"/offer"}
           />
           <Card
             image={"/source-folder/images/img-4.jpg"}
