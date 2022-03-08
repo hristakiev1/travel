@@ -10,6 +10,7 @@ import Credentials from "./components/pages/Credentials";
 import Offer from "./components/offer/Offer";
 import Exercise1 from "./components/interviewExercises/Exercise1";
 import Exercise2 from "./components/interviewExercises/Exercise2";
+import Exercise3 from "./components/interviewExercises/Exercise3";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/offer" element={<Offer />} />
         <Route path="/exercise1" element={<Exercise1 />} />
         <Route path="/exercise2" element={<Exercise2 />} />
+        <Route path="/exercise3" element={<Exercise3 />} />
       </Routes>
       {/* <Footer /> */}
     </div>
