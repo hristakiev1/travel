@@ -8,6 +8,8 @@ import Footer from "./components/footer-component/Footer";
 import Unsubscribe from "./components/pages/Unsubscribe";
 import Credentials from "./components/pages/Credentials";
 import Offer from "./components/offer/Offer";
+import Exercise1 from "./components/interviewExercises/Exercise1";
+import Exercise2 from "./components/interviewExercises/Exercise2";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/Unsubscribe" element={<Unsubscribe />} />
         <Route path="/sign-up" element={<Credentials />} />
         <Route path="/offer" element={<Offer />} />
+        <Route path="/exercise1" element={<Exercise1 />} />
+        <Route path="/exercise2" element={<Exercise2 />} />
       </Routes>
       {/* <Footer /> */}
     </div>
