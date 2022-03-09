@@ -15,7 +15,7 @@ const Exercise3 = () => {
 
     const getHeaders = (location) => {
       if (location === undefined) return;
-      return Object.keys(location).map((thead) => thead);
+      return Object.keys(location[0]);
     };
     setLocations(usersLocations);
     setHeaders(getHeaders(usersLocations));
@@ -25,45 +25,42 @@ const Exercise3 = () => {
     await fetchData();
   }, []);
 
-  const displayHeader = (location) => {
-    if (location === undefined) return;
-    const theads = Object.keys(location).map((thead, indx) => {
-      if (typeof location[thead] === "object")
-        // return console.log(Object.keys(location[thead]));
-        // return location[thead].map((headTitle, indx) => console.log(headTitle));
-
-        return <th key={indx}>{thead}</th>;
-    });
-
-    return theads;
+  const displayHeader = (headers) => {
+    return headers.map((header) => <th key={header}>{header}</th>);
   };
 
-  const renderCell = (location) => {
-    const tdata = Object.keys(location);
+  const renderCell = (location, header) => {
+    if (typeof location[header] === "object") {
+      const subHeads = Object.keys(location[header]);
+      const tableSubdata = subHeads.map((subHead) => location[header][subHead]);
+      return <td key={tableSubdata}>{tableSubdata}</td>;
+    }
 
-    return tdata.map((data, indx) => {
-      if (typeof location[data] === "object") return;
-      return <td key={indx}>{location[data]}</td>;
-    });
+    return <td key={header}>{location[header]}</td>;
   };
 
-  const displayBody = (data) => {
-    if (data === undefined) return;
-    return data.map((location, indx) => (
-      <tr key={indx}>{renderCell(location)}</tr>
-    ));
+  const TableBody = (locations, headers) => {
+    if (locations === undefined) return;
+    return (
+      <tbody>
+        {locations.map((location, indx) => (
+          <tr key={indx}>
+            {headers.map((header) => renderCell(location, header))}
+          </tr>
+        ))}
+      </tbody>
+    );
   };
 
-  console.log(headers);
   return (
     <div>
       <h1>Exercise 3</h1>
 
       <table>
         <thead>
-          <tr>{displayHeader(locations[0])}</tr>
+          <tr>{displayHeader(headers)}</tr>
         </thead>
-        <tbody>{displayBody(locations)}</tbody>
+        {TableBody(locations, headers)}
       </table>
     </div>
   );
