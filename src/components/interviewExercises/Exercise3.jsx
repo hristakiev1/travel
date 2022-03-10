@@ -3,6 +3,22 @@ import React, { useState, useEffect } from "react";
 const Exercise3 = () => {
   const [locations, setLocations] = useState([]);
   const [headers, setHeaders] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [sortOrder, setSortOrder] = useState({
+    path: "country",
+    order: "asc",
+  });
+
+  const raiseSort = (path) => {
+    if (!path) return;
+    let sortedColumn = sortOrder;
+    if (sortOrder.path === path && sortOrder.order === "asc") {
+      sortedColumn = { path, order: "desc" };
+    } else {
+      sortedColumn = { path, order: "asc" };
+    }
+    setSortOrder(sortedColumn);
+  };
 
   const loopNestedObj = (obj, head) => {
     let mutateObject = [];
@@ -41,7 +57,15 @@ const Exercise3 = () => {
   }, []);
 
   const displayHeader = (headers) => {
-    return headers.map((header) => <th key={header}>{header}</th>);
+    return headers.map((header) => (
+      <th
+        key={header}
+        style={{ cursor: "pointer" }}
+        onClick={() => raiseSort(header)}
+      >
+        {header}
+      </th>
+    ));
   };
 
   const renderCell = (location) => {
@@ -53,24 +77,42 @@ const Exercise3 = () => {
   };
 
   const TableBody = (locations) => {
-    return (
-      <tbody>
-        {locations.map((location, indx) => (
-          <tr key={indx}>{renderCell(location)}</tr>
-        ))}
-      </tbody>
-    );
+    return locations.map((location, indx) => (
+      <tr key={indx}>{renderCell(location)}</tr>
+    ));
   };
 
+  const sortFunction = (items, sortType) => {
+    items.sort((a, b) => {
+      const isReversed = sortType.order === "asc" ? 1 : -1;
+      const path = sortType.path;
+      return isReversed * a[path].localeCompare(b[path]);
+    });
+  };
+
+  sortFunction(locations, sortOrder);
+
+  const inputHandler = (e) => {
+    const text = e.target.value;
+    setSearchText(text);
+  };
+  console.log(searchText);
+
+  const handleSearch = (locations, text) => {};
   return (
     <div>
       <h1>Exercise 3</h1>
+      <input
+        type="text"
+        placeholder="Search here"
+        onInput={inputHandler}
+      ></input>
 
       <table>
         <thead>
           <tr>{displayHeader(headers)}</tr>
         </thead>
-        {TableBody(locations)}
+        <tbody>{TableBody(locations)}</tbody>
       </table>
     </div>
   );
