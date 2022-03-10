@@ -6,6 +6,7 @@ const Exercise2 = () => {
   const [users, setUsers] = useState([]);
 
   const displayUser = (userInfo) => {
+    console.log(userInfo);
     const {
       name: { first, last },
       picture: { medium, large },
@@ -27,7 +28,7 @@ const Exercise2 = () => {
     const database = await fetch("https://randomuser.me/api");
     const data = await database.json();
     // const stringData = JSON.stringify(data, null, 2);
-    const nextPageNumber = (await data.info.page) + 2;
+    // const nextPageNumber = await data.info.page;
 
     const userArray = [...users, ...data.results];
     //   const users = await JSON.parse(data);
@@ -35,14 +36,13 @@ const Exercise2 = () => {
     // setString(stringData);
 
     setUsers(userArray);
-    setNextPage(nextPageNumber);
+    // setNextPage(nextPageNumber);
   };
 
   useEffect(() => {
     handleAddUser();
   }, [nextPage]);
 
-  console.log(nextPage);
   return (
     <div>
       <h1>Exercise 2</h1>
